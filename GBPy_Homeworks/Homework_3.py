@@ -54,20 +54,22 @@ for j in range(len(array_B)):
 num_X = int(input('Введите число X: '))
 desired_number_to = 0 # Перебираем список с уникальными значениями для выбора наиболее близких к заданному
 desired_number_after = 0
+flag = False
 for k in range(1, len(array_Bb)):
     if num_X == array_Bb[k]:
-        print(array_Bb[k])
-        break
-    if array_Bb[k - 1] <= num_X <= array_Bb[k]:
+        flag = True
+
+    if num_X != array_Bb[k] and array_Bb[k - 1] <= num_X <= array_Bb[k]:
         desired_number_to = array_Bb[k - 1]
         desired_number_after = array_Bb[k]
 to = abs(num_X - desired_number_to)
 after = abs(num_X - desired_number_after)
-if to == after:
+if flag: print(num_X)
+if not flag and to == after:
     print(f'или {desired_number_to}, или {desired_number_after}')
-elif 2 <= to > after:
+elif not flag and 2 <= to > after:
     print(desired_number_after)
-elif 2 <= after > to:
+elif not flag and 2 <= after > to:
     print(desired_number_to)        
 
 # number = abs(num_X - array_B[0])
