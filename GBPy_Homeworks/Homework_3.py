@@ -21,6 +21,11 @@ for i in range(len(array_A)):
         count_X += 1
 print(count_X)
 
+# Решение в другом виде
+a = [int(input()) for _ in range(int(input()))]
+x = int(input('Введите искомое число: '))
+print(a.count(x))
+
 # Задача 18: Требуется найти в массиве A[1..N] самый близкий по величине элемент к
 # заданному числу X. Пользователь в первой строке вводит натуральное число N – количество
 # элементов в массиве. В последующих строках записаны N целых чисел Ai. Последняя строка
@@ -81,6 +86,33 @@ elif not flag and 2 <= after > to:
 #         ind = i
 # print(array_B[ind])
 
+# Решение в другом виде
+rnd_list = [random.randint(-100, 100) for _ in range(10)]
+x = int(input())
+print(rnd_list)
+min_diff = abs(rnd_list[0] - x)
+for el in rnd_list:
+    if abs(el - x) < min_diff:
+        min_diff = abs(el - x)
+        find_el = el
+print(find_el)
+
+# Еще вариант
+
+rnd_list = [random.randint(-100, 100) for _ in range(10)]
+x = int(input())
+print(rnd_list)
+some_set = set(rnd_list)
+diff = 0
+while True:
+    if x + diff in some_set:
+        print(x + diff)
+        break
+    elif x - diff in some_set:
+        print(x - diff)
+        break
+    diff += 1
+
 
 # Задача 20: В настольной игре Скрабл(Scrabble) каждая буква имеет определенную
 # ценность. В случае с английским алфавитом очки распределяются так:
@@ -138,3 +170,17 @@ else:
                 sum_en += k
 print(sum_en)
 
+# Решение в другом виде
+dictionary =    {
+                'A': 1, 'E': 1, 'I': 1, 'O': 1, 'U': 1, 'L': 1, 'N': 1, 'S': 1, 'T': 1, 'R': 1,
+                'D': 2, 'G': 2,
+                'B': 3, 'C': 3, 'M': 3, 'P': 3,
+                'F': 4, 'H': 4, 'V': 4, 'W': 4, 'Y': 4,
+                'K': 5,
+                'J': 8, 'X': 8, 
+                'Q': 10, 'Z': 10
+                }
+summa = 0
+for letter in input():
+    summa += dictionary[letter]
+print(summa)
