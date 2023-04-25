@@ -6,15 +6,15 @@
 # A = 3; B = 5 -> 243 (3⁵)
 #     A = 2; B = 3 -> 8 
 
-# num_A = int(input('Введите число A: '))
-# num_B = int(input('Введите число B: '))
-# def exponentiation(a, b):
-#     if b == 1:
-#         return a
-#     while b >= 1:
-#         return (a * exponentiation(a, b - 1))
+num_A = int(input('Введите число A: '))
+num_B = int(input('Введите число B: '))
+def exponentiation(a, b):
+    if b == 1:
+        return a
+    while b >= 1:
+        return (a * exponentiation(a, b - 1))
     
-# print(f'Результатом возведения числа {num_A} в степень {num_B} будет {exponentiation(num_A, num_B)}')
+print(f'Результатом возведения числа {num_A} в степень {num_B} будет {exponentiation(num_A, num_B)}')
 
 
 # Дана строка (возможно, пустая), состоящая из букв A-Z:
@@ -26,14 +26,6 @@
 # Пояснения: если символ встречается 1 раз, он остается без
 # изменений, если символ повторяется более 1 раза, к нему
 # добавляется количество повторений.
-
-# somesing = input('>>> ')
-# some_str = []
-# for i in range(len(somesing)):
-#     some_str.append(ord(f'{somesing[i]}'))
-# print(somesing.count('B'))
-# print(some_str) #65-90
-
 
 def RLE(simbols):
     flag = True
