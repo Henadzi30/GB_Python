@@ -6,13 +6,13 @@
 # Ввод: 7 2 5
 # Вывод: 7 9 11 13 15
 
-# first_el = int(input('Введите первый элемент массива: '))
-# diferent_el = int(input('Введите разность элементов: '))
-# count_el = int(input('Введите количество элементов в массиве: '))
-# my_list = []
-# for i in range(1, count_el + 1):
-#     my_list.append(first_el + (i - 1) * diferent_el)
-# print(* my_list)
+first_el = int(input('Введите первый элемент массива: '))
+diferent_el = int(input('Введите разность элементов: '))
+count_el = int(input('Введите количество элементов в массиве: '))
+my_list = []
+for i in range(1, count_el + 1):
+    my_list.append(first_el + (i - 1) * diferent_el)
+print(* my_list)
 
 
 # Задача 32: Определить индексы элементов массива(списка), значения которых принадлежат
