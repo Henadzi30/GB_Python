@@ -20,9 +20,9 @@ def ritm(poem):
         return sum(1 for i in phrase if i in 'аеёиоуыэюя')
     include_vowels = count_vowels(str_vin[0])
     if all([count_vowels(i) == include_vowels for i in str_vin]):
-        return('Парам пам-пам')
+        return 'Парам пам-пам'
     else:
-        return('Пам парам')
+        return 'Пам парам'
 
 print(ritm(input('>>> ')))
 
